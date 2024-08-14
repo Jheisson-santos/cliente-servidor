@@ -7,12 +7,8 @@ app.listen(port, ()=>{
 })
 //.get necessita de dois parametro, a requisição e a resposta
 app.get('/', (requisicao, resposta)=>{
-    resposta.send('No alto daquele cume plantei um roseira')
+    resposta.send('Ola caro usuario')
 })
-app.get('/rota2', (requisicao, resposta)=>{
-    resposta.send('oakdlfgok')
-})
-app.get('/primeDay/:produto', (requisicao, resposta)=>{
-    
-    resposta.send(requisicao.params.produto)
+app.get('/curso/:nome/:idade/:curso', (requisicao, resposta)=>{
+    resposta.send(`${requisicao.params.nome} tem ${requisicao.params.idade} e esta no curso ${requisicao.params.curso}`)
 })
